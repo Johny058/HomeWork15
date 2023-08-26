@@ -29,25 +29,15 @@ public class Slytherin extends Hogwarts {
         }
     }
 
-    public static void printTheBestStudent(Slytherin[] slytherins) {
-        int student1 = slytherins[0].getCunning() + slytherins[0].getDetermination() +
-                slytherins[0].getAmbition() + slytherins[0].getResourcefulness() +
-                slytherins[0].getThirstForPower();
-        int student2 = slytherins[1].getCunning() + slytherins[1].getDetermination() +
-                slytherins[1].getAmbition() + slytherins[1].getResourcefulness() +
-                slytherins[1].getThirstForPower();
-        if (student1 > student2) {
-            System.out.println("У Драко Малфея, хитрость - " + slytherins[0].getCunning() +
-                    " , решительность - " + slytherins[0].getDetermination() + " , амбиционизм -" +
-                    slytherins[0].getAmbition() + " , находчивость - " + slytherins[0].getResourcefulness() +
-                    " , жажда власти -" + slytherins[0].getThirstForPower());
-            System.out.println("Драго лучший Слизерениц, чем Грехан.");
+    public void printTheBestStudent(Slytherin slytherin) {
+        if (cunning + determination + ambition + resourcefulness + thirstForPower > slytherin.cunning +
+                slytherin.determination + slytherin.ambition + slytherin.resourcefulness +
+                slytherin.thirstForPower) {
+            System.out.println(name + " " + lastName + " лучший Слизеренец, чем " + slytherin.getName() +
+                    " " + slytherin.getLastName());
         } else {
-            System.out.println("У Грехана Мюнтегю, хитрость - " + slytherins[1].getCunning() +
-                    " , решительность - " + slytherins[1].getDetermination() + " , амбиционизм -" +
-                    slytherins[1].getAmbition() + " , находчивость - " + slytherins[1].getResourcefulness() +
-                    " , жажда власти -" + slytherins[1].getThirstForPower());
-            System.out.println("Грехан лучший Слизеренец, чем Драго.");
+            System.out.println(slytherin.getName() + " " + slytherin.getLastName() + " лучший " +
+                    "Слизеренец, чем " + name + lastName);
         }
     }
 
@@ -71,4 +61,14 @@ public class Slytherin extends Hogwarts {
         return thirstForPower;
     }
 
+    @Override
+    public String toString() {
+        return "Slytherin{" +
+                "cunning=" + cunning +
+                ", determination=" + determination +
+                ", ambition=" + ambition +
+                ", resourcefulness=" + resourcefulness +
+                ", thirstForPower=" + thirstForPower +
+                '}';
+    }
 }

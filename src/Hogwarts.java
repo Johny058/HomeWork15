@@ -1,6 +1,6 @@
 public class Hogwarts {
-    String name;
-    private final String lastName;
+    protected final String name;
+    protected final String lastName;
 
     private final int witchcraft;  // колдовство
     private final int transgression;  // трансгесирование
@@ -13,15 +13,11 @@ public class Hogwarts {
     }
 
 
-    public static void printTheBestStudentInHogwarts(Hogwarts[] hogwarts) {
-        int student1 = hogwarts[0].getWitchcraft() + hogwarts[0].getTransgression();
-        int student2 = hogwarts[3].getWitchcraft() + hogwarts[3].getTransgression();
-        if (student1 > student2) {
-            System.out.println(hogwarts[0].getName() + " " + hogwarts[0].getLastName() + " сильнейший маг " +
-                    "в Хогвартсе.");
+    public void printTheBestStudent(Hogwarts hogwarts) {
+        if (witchcraft + transgression > hogwarts.witchcraft + hogwarts.transgression) {
+            System.out.println(name + " " + lastName + " сильнейший маг в Хогвартсе.");
         } else {
-            System.out.println(hogwarts[3].getName() + " " + hogwarts[3].getLastName() + " сильнейший маг " +
-                    "в Хогвартсе.");
+            System.out.println(hogwarts.getName() + " " + hogwarts.getLastName() + " сильнейший маг в Хогвартсе.");
         }
     }
 
@@ -41,6 +37,15 @@ public class Hogwarts {
         return transgression;
     }
 
+    @Override
+    public String toString() {
+        return "Hogwarts{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", witchcraft=" + witchcraft +
+                ", transgression=" + transgression +
+                '}';
+    }
 }
 
 

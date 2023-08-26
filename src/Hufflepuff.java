@@ -22,22 +22,14 @@ public class Hufflepuff extends Hogwarts {
         }
     }
 
-    public static void printTheBestStudent(Hufflepuff[] hufflepuffs) {
-        int student1 = hufflepuffs[0].getDiligence() + hufflepuffs[0].getLoyalty() +
-                hufflepuffs[0].getHonesty();
-        int student2 = hufflepuffs[1].getDiligence() + hufflepuffs[1].getLoyalty() +
-                hufflepuffs[1].getHonesty();
-
-        if (student1 > student2) {
-            System.out.println("У Захарии Смит, трудолюбие - " + hufflepuffs[0].getDiligence() +
-                    " , верность - " + hufflepuffs[0].getLoyalty() + " , честность - " +
-                    hufflepuffs[0].getHonesty());
-            System.out.println("Захария лучший Пуффендуец, чем Седриг.");
+    public void printTheBestStudent(Hufflepuff hufflepuff) {
+        if (diligence + loyalty + honesty  > hufflepuff.diligence +
+                hufflepuff.loyalty + hufflepuff.honesty) {
+            System.out.println(name + " " + lastName + " лучший Пуффендуец, чем " + hufflepuff.getName() +
+                    " " + hufflepuff.getLastName());
         } else {
-            System.out.println("У Седриг Диггори, трудолюбие - " + hufflepuffs[1].getDiligence() +
-                    " , верность - " + hufflepuffs[1].getLoyalty() + " , честность - " +
-                    hufflepuffs[1].getHonesty());
-            System.out.println("Седриг лучший Пуффендуец, чем Захария.");
+            System.out.println(hufflepuff.getName() + " " + hufflepuff.getLastName() + " лучший " +
+                    "Пуффендуец, чем " + name + lastName);
         }
     }
 
@@ -53,4 +45,12 @@ public class Hufflepuff extends Hogwarts {
         return honesty;
     }
 
+    @Override
+    public String toString() {
+        return "Hufflepuff{" +
+                "diligence=" + diligence +
+                ", loyalty=" + loyalty +
+                ", honesty=" + honesty +
+                '}';
+    }
 }
