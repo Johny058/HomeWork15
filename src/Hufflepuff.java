@@ -23,7 +23,7 @@ public class Hufflepuff extends Hogwarts {
     }
 
     public void printTheBestStudent(Hufflepuff hufflepuff) {
-        if (diligence + loyalty + honesty  > hufflepuff.diligence +
+        if (diligence + loyalty + honesty > hufflepuff.diligence +
                 hufflepuff.loyalty + hufflepuff.honesty) {
             System.out.println(name + " " + lastName + " лучший Пуффендуец, чем " + hufflepuff.getName() +
                     " " + hufflepuff.getLastName());

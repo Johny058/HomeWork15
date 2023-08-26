@@ -34,7 +34,6 @@ public class Main {
             }
         }
 
-
         Gryffendor Garry = (Gryffendor) hogwarts[0];
         Gryffendor Germyona = (Gryffendor) hogwarts[1];
         Garry.printTheBestStudent(Germyona);

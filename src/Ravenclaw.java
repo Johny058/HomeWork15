@@ -25,7 +25,7 @@ public class Ravenclaw extends Hogwarts {
     }
 
     public void printTheBestStudent(Ravenclaw ravenclaw) {
-        if (intelligence + wisdom + wit +  + creativity > ravenclaw.intelligence +
+        if (intelligence + wisdom + wit + +creativity > ravenclaw.intelligence +
                 ravenclaw.wisdom + ravenclaw.wit + ravenclaw.creativity) {
             System.out.println(name + " " + lastName + " лучший Когтевранец, чем " + ravenclaw.getName() +
                     " " + ravenclaw.getLastName());

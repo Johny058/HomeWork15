@@ -12,7 +12,6 @@ public class Hogwarts {
         this.transgression = transgression;
     }
 
-
     public void printTheBestStudent(Hogwarts hogwarts) {
         if (witchcraft + transgression > hogwarts.witchcraft + hogwarts.transgression) {
             System.out.println(name + " " + lastName + " сильнейший маг в Хогвартсе.");
